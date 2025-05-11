@@ -1,13 +1,20 @@
 name: "New Feature"
 description: Suggest a new idea
 title: "Feature: [Title]"
-labels: [Feature]
+labels: ["Feature"]
 body:
-- type: textarea
-attributes:
-label: description
-description: Describe what this new feature is.
-- type: textarea
-attributes:
-label: Proposed Technical Solution
-description: If you have an idea on how to implement it, put it here.
+  - type: textarea
+    id: description
+    attributes:
+      label: "Feature Description"
+      description: "Décris en détail la fonctionnalité que tu proposes."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Proposed Technical Solution"
+      description: "Si tu as déjà une idée d'implémentation technique, note-la ici."
+    validations:
+      required: false
