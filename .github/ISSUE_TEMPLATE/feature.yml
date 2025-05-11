@@ -1,0 +1,13 @@
+name: New Feature
+description: Suggest a new idea
+title: "Feature: [Title]"
+labels: [Feature]
+body:
+- type: textarea
+attributes:
+label: description
+description: Describe what this new feature is.
+- type: textarea
+attributes:
+label: Proposed Technical Solution
+description: If you have an idea on how to implement it, put it here.
