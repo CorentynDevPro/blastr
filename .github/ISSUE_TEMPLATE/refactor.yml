@@ -1,0 +1,28 @@
+name: "Refactor"
+description: Code improvements that don’t change features
+title: "Refactor: [Component or file name]"
+labels: ["Refactor", "Tech Debt"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: "What is the goal of this refactor?"
+      description: "Explain why the refactor is needed (readability, performance, modularity, etc)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: "Proposed changes"
+      description: "Describe the expected changes and technical ideas."
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Potential impact"
+      description: "Mention components or parts of the system that may be affected."
+    validations:
+      required: false
