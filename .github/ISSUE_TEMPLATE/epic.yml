@@ -1,21 +1,22 @@
 name: Epic
 description: Planning a major feature
-title: "EPIC: [Feature Name]"
+title: "EPIC: [Feature name]"
 labels: [epic]
 body:
-- type: Markdown
-attributes:
-value: An epic is a key feature to be broken down into several subtasks (issues).
-- type: Textarea
-id: Objective
-attributes:
-label: Objective of the epic
-description: What should this feature accomplish?
-- type: Textarea
-id: Tasks
-attributes:
-label: Subtasks
-description: List of related issues (create them later if needed).
-value: 
-- [ ] #Issue1
-- [ ] #Issue2
+  - type: markdown
+    attributes:
+      value: |
+        An *epic* is a key feature to be broken down into several subtasks (issues).
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective of the epic
+      description: Que doit accomplir cette fonctionnalité ?
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Subtasks
+      description: Description: List of related issues (create them later if needed).
+      value: |
+        - [ ] #Issue1
+        - [ ] #Issue2
