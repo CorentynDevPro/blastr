@@ -16,7 +16,7 @@ body:
     id: tasks
     attributes:
       label: Subtasks
-      description: Description: List of related issues (create them later if needed).
+      description: List of related issues (create them later if needed).
       value: |
         - [ ] #Issue1
         - [ ] #Issue2
