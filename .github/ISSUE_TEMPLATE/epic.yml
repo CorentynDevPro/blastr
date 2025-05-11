@@ -5,8 +5,7 @@ labels: [epic]
 body:
 - type: Markdown
 attributes:
-value: |
-An epic is a key feature to be broken down into several subtasks (issues).
+value: An epic is a key feature to be broken down into several subtasks (issues).
 - type: Textarea
 id: Objective
 attributes:
@@ -17,6 +16,6 @@ id: Tasks
 attributes:
 label: Subtasks
 description: List of related issues (create them later if needed).
-value: |
+value: 
 - [ ] #Issue1
 - [ ] #Issue2
