@@ -1,0 +1,47 @@
+name: 🚀 Continuous Integration
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    name: 🧪 Lint + TypeCheck + Test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🟣 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
+
+      - name: ✅ Verify workspace integrity
+        run: pnpm install --frozen-lockfile
+
+      - name: 🧹 Lint
+        run: pnpm lint
+
+      - name: 🎨 Check Prettier formatting
+        run: pnpm format:check
+
+      - name: 🧠 Type checking
+        run: pnpm typecheck
+
+      - name: 🧪 Run unit tests (Vitest)
+        run: pnpm test:ci
