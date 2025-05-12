@@ -6,9 +6,16 @@
   "scripts": {
     "build": "pnpm -r run build",
     "dev": "pnpm -r run dev",
-    "lint": "pnpm -r run lint",
+    "lint": "eslint . --ext .ts,.tsx --fix",
     "test": "pnpm -r run test",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "workspaces": [
     "packages/*"
@@ -18,8 +25,13 @@
     "pnpm": ">=9"
   },
   "devDependencies": {
-    "prettier": "^3.0.0",
-    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
     "typescript": "^5.0.0"
   },
   "keywords": [],

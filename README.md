@@ -1,5 +1,6 @@
 # blastr
 Your interstellar frontend component framework 🚀
+![build](https://img.shields.io/github/actions/workflow/status/CorentynDevPro/blastr/ci.yml?branch=main)
 
 ## 🚀 Getting Started
 
